@@ -11,3 +11,5 @@ Embedding Status Image Travis CI
 [![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
 My first asciinema for fifth step https://asciinema.org/a/284870.
+
+My second asciinema for sixth step https://asciinema.org/a/285638.
