@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const task = () => {
+const brainEven = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   for (let i = 1; i <= 3; i += 1) {
@@ -21,4 +21,4 @@ const task = () => {
   }
 };
 
-export default task;
+export default brainEven;
