@@ -15,3 +15,5 @@ My asciinema for fifth step https://asciinema.org/a/284870.
 My asciinema for sixth step https://asciinema.org/a/285638.
 
 My asciinema for seventh step https://asciinema.org/a/286172.
+
+My asciinema for eighth step https://asciinema.org/a/287509.
