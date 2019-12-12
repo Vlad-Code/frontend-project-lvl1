@@ -38,3 +38,16 @@ export const toGetGcd = (num1, num2) => {
     return toGetGcd(num1, remainder);
   }
 };
+
+export const toGetProgression = (firstNum, d, miss) => {
+  let progression = '';
+  for (let n = 1; n <= 10; n += 1) {
+    let number = firstNum + (n - 1) * d;
+    if (n === miss) {
+      number = '..';
+    }
+    progression = `${progression} ${number}`;
+  }
+  return progression;
+};
+
