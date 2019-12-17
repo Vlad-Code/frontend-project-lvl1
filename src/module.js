@@ -51,3 +51,11 @@ export const toGetProgression = (firstNum, d, miss) => {
   return progression;
 };
 
+export const toGetIsPrime = (number) => {
+  for (let divider = 2; divider <= Math.sqrt(number); divider += 1) {
+    if (number % divider === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};

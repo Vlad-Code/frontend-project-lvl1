@@ -9,7 +9,7 @@ const brainProgression = () => {
     const firstNumber = getRandomInRange(1, 100);
     const d = getRandomInRange(1, 10);
     const numberOfMissedNumber = getRandomInRange(1, 10);
-    const missedNumber = (numberOfMissedNumber === 1) ? firstNumber : (2 *firstNumber + (numberOfMissedNumber -2) * d + numberOfMissedNumber * d) / 2;
+    const missedNumber = (numberOfMissedNumber === 1) ? firstNumber : (2 * firstNumber + (numberOfMissedNumber - 2) * d + numberOfMissedNumber * d) / 2;
     const myProgression = toGetProgression(firstNumber, d, numberOfMissedNumber);
     console.log(`Question:${myProgression}`);
     const answer = readlineSync.question('Your answer: ');
