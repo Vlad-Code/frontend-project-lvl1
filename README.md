@@ -13,3 +13,5 @@ My asciinema for sixth step <a href="https://asciinema.org/a/285638" target="_bl
 
 My asciinema for seventh step <a href="https://asciinema.org/a/286172" target="_blank"><img src="https://asciinema.org/a/286172.svg" /></a>
 My asciinema for eighth step <a href="https://asciinema.org/a/287509" target="_blank"><img src="https://asciinema.org/a/287509.svg" /></a>
+
+My asciinema for ninth step <a href="https://asciinema.org/a/288802" target="_blank"><img src="https://asciinema.org/a/288802.svg" /></a>
