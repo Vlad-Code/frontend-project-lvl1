@@ -7,10 +7,9 @@ This is my first learning project for Frontend JS profession. It is a simple gam
 
 [![Build Status](https://travis-ci.org/Vlad-Code/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Vlad-Code/frontend-project-lvl1)
 
-My asciinema for fifth step https://asciinema.org/a/284870.
+My asciinema for fifth step <a href="https://asciinema.org/a/284870" target="_blank"><img src="https://asciinema.org/a/284870.svg" /></a>
 
-My asciinema for sixth step https://asciinema.org/a/285638.
+My asciinema for sixth step <a href="https://asciinema.org/a/285638" target="_blank"><img src="https://asciinema.org/a/285638.svg" /></a>
 
-My asciinema for seventh step https://asciinema.org/a/286172.
-
-My asciinema for eighth step https://asciinema.org/a/287509.
+My asciinema for seventh step <a href="https://asciinema.org/a/286172" target="_blank"><img src="https://asciinema.org/a/286172.svg" /></a>
+My asciinema for eighth step <a href="https://asciinema.org/a/287509" target="_blank"><img src="https://asciinema.org/a/287509.svg" /></a>
