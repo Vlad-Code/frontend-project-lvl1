@@ -1,14 +1,18 @@
-import readlineSync from 'readline-sync';
-
-const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import {
+  beginOfTheGame, getUserName, getQuestion, getAnswer,
+} from '../game-engine';
 
 const brainEven = () => {
-  const userName = readlineSync.question('May I have your name? ');
+  const firstQuestion = 'Answer "yes" if the number is even, otherwise answer "no"';
+  beginOfTheGame(firstQuestion);
+  const userName = getUserName();
   console.log(`Hello, ${userName}!`);
+  const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomInRange(1, 100);
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
+    const question = `${number}`;
+    getQuestion(question);
+    const answer = getAnswer();
     if ((number % 2 === 0 && answer === 'yes') || (number % 2 !== 0 && answer === 'no')) {
       console.log('Correct!');
       if (i === 3) {
