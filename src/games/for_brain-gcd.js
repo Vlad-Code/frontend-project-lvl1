@@ -1,14 +1,10 @@
 /* eslint-disable consistent-return */
-import {
-  beginOfTheGame, getUserName, getQuestion, getAnswer, engine,
-} from '../game-engine';
+import engine from '../new_game-engine';
+
+import getRandomInRange from '../for_all_games';
 
 const brainGcd = () => {
   const firstQuestion = 'Find the greatest common divisor of given numbers.';
-  beginOfTheGame(firstQuestion);
-  const userName = getUserName();
-  console.log(`Hello, ${userName}!`);
-  const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const toGetGcd = (num1, num2) => {
     if (num1 > num2) {
       const remainder = num1 % num2;
@@ -25,19 +21,13 @@ const brainGcd = () => {
       return toGetGcd(num1, remainder);
     }
   };
-  for (let i = 1; i <= 3; i += 1) {
+  const getQuestionAndRightAnswer = () => {
     const number1 = getRandomInRange(1, 100);
     const number2 = getRandomInRange(1, 100);
-    const rightAnswer = toGetGcd(number1, number2);
-    const question = `${number1} ${number2}`;
-    getQuestion(question);
-    const answer = Number(getAnswer());
-    const wrongAnswerCase = `'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`;
-    const game = engine(answer, rightAnswer, wrongAnswerCase, i, userName);
-    if (game === '') {
-      break;
-    }
-  }
+    console.log(`Question: ${number1} ${number2}`);
+    return toGetGcd(number1, number2);
+  };
+  engine(firstQuestion, getQuestionAndRightAnswer);
 };
 
 export default brainGcd;
