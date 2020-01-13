@@ -1,4 +1,4 @@
-import engine from '../new_game-engine';
+import engine from '../game-engine';
 
 import getRandomInRange from '../for_all_games';
 
