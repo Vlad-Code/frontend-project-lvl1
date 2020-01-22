@@ -5,6 +5,7 @@ import engine from '../game-engine';
 import getRandomInRange from '../for_all_games';
 
 const firstQuestion = 'Find the greatest common divisor of given numbers.';
+const numberOfRounds = 3;
 const toGetGcd = (num1, num2) => {
   if (num1 > num2) {
     const remainder = num1 % num2;
@@ -26,11 +27,11 @@ const getQuestionAndRightAnswer = () => {
   const number1 = getRandomInRange(1, 100);
   const number2 = getRandomInRange(1, 100);
   const question = `${number1} ${number2}`;
-  const rightAnswer = toGetGcd(number1, number2);
+  const rightAnswer = String(toGetGcd(number1, number2));
   return cons(question, rightAnswer);
 };
 const brainGcd = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer);
+  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
 };
 
 export default brainGcd;

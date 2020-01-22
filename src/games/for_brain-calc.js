@@ -5,9 +5,10 @@ import engine from '../game-engine';
 import getRandomInRange from '../for_all_games';
 
 const firstQuestion = 'What is the result of the expression?';
+const numberOfRounds = 3;
 const getOperator = () => {
   const myString = '+-*';
-  const numberOfSymbol = getRandomInRange(0, 2);
+  const numberOfSymbol = getRandomInRange(0, myString.length - 1);
   return myString[numberOfSymbol];
 };
 const getResult = (num1, num2, symbol) => {
@@ -25,11 +26,11 @@ const getQuestionAndRightAnswer = () => {
   const number2 = getRandomInRange(1, 100);
   const operator = getOperator();
   const question = `${number1} ${operator} ${number2}`;
-  const rightAnswer = getResult(number1, number2, operator);
+  const rightAnswer = String(getResult(number1, number2, operator));
   return cons(question, rightAnswer);
 };
 const brainCalc = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer);
+  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
 };
 
 export default brainCalc;
