@@ -2,14 +2,14 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../for_all_games';
+import getRandomInRange from '../utils';
 
 const firstQuestion = 'What number is missing in the progression?';
 const numberOfRounds = 3;
-const toGetProgression = (firstNum, addedNum, miss) => {
+const getProgression = (firstNum, addedNum, miss, numberOfMembers) => {
   let progression = '';
-  for (let n = 1; n <= 10; n += 1) {
-    let number = firstNum + (n - 1) * addedNum;
+  for (let n = 0; n < numberOfMembers; n += 1) {
+    let number = firstNum + n * addedNum;
     if (n === miss) {
       number = '..';
     }
@@ -20,11 +20,12 @@ const toGetProgression = (firstNum, addedNum, miss) => {
 const getQuestionAndRightAnswer = () => {
   const firstNumber = getRandomInRange(1, 100);
   const addedNum = getRandomInRange(1, 10);
-  const numberOfMissedNumber = getRandomInRange(1, 10);
-  const myProgression = toGetProgression(firstNumber, addedNum, numberOfMissedNumber);
-  const missedNumber = (2 * firstNumber + (numberOfMissedNumber - 2) * addedNum
-   + numberOfMissedNumber * addedNum) / 2;
-  const result = (numberOfMissedNumber === 1) ? firstNumber : missedNumber;
+  const numberOfMembers = 10;
+  const numberOfMissedNumber = getRandomInRange(1, numberOfMembers);
+  const myProgression = getProgression(firstNumber, addedNum,
+    numberOfMissedNumber, numberOfMembers);
+  const missedNumber = firstNumber + numberOfMissedNumber * addedNum;
+  const result = (numberOfMissedNumber === 0) ? firstNumber : missedNumber;
   const rightAnswer = String(result);
   const question = `${myProgression}`;
   return cons(question, rightAnswer);

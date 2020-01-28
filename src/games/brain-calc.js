@@ -2,14 +2,14 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../for_all_games';
+import getRandomInRange from '../utils';
 
 const firstQuestion = 'What is the result of the expression?';
 const numberOfRounds = 3;
 const getOperator = () => {
-  const myString = '+-*';
-  const numberOfSymbol = getRandomInRange(0, myString.length - 1);
-  return myString[numberOfSymbol];
+  const operatorList = '+-*';
+  const numberOfSymbol = getRandomInRange(0, operatorList.length - 1);
+  return operatorList[numberOfSymbol];
 };
 const getResult = (num1, num2, symbol) => {
   switch (symbol) {

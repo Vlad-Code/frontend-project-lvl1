@@ -14,14 +14,11 @@ const engine = (firstQuestion, getQuestionAndRightAnswer, numberOfRounds) => {
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');
-      if (i === 3) {
-        console.log(`Congratulations, ${userName}!`);
-      }
     } else {
-      console.log(`'${answer}' is wrong answer ;( Correct answer is '${rightAnswer}'\nLet's try again, ${userName}!`);
-      break;
+      return console.log(`'${answer}' is wrong answer ;( Correct answer is '${rightAnswer}'\nLet's try again, ${userName}!`);
     }
   }
+  return console.log('Congratulations!');
 };
 
 export default engine;
