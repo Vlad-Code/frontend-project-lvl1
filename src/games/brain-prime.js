@@ -4,24 +4,26 @@ import engine from '../game-engine';
 
 import getRandomInRange from '../utils';
 
-const firstQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const numberOfRounds = 3;
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
-  for (let divider = 2; divider <= Math.sqrt(number); divider += 1) {
-    if (number % divider === 0) {
-      return false;
+  if (number > 1) {
+    for (let divider = 2; divider <= Math.sqrt(number); divider += 1) {
+      if (number % divider === 0) {
+        return false;
+      }
     }
+    return true;
   }
-  return true;
+  return false;
 };
 const getQuestionAndRightAnswer = () => {
-  const number = getRandomInRange(1, 1000);
+  const number = getRandomInRange(-1000, 1000);
   const question = String(number);
   const rightAnswer = (isPrime(number) === true) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };
 const brainPrime = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
+  engine(task, getQuestionAndRightAnswer);
 };
 
 export default brainPrime;

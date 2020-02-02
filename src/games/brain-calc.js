@@ -4,12 +4,11 @@ import engine from '../game-engine';
 
 import getRandomInRange from '../utils';
 
-const firstQuestion = 'What is the result of the expression?';
-const numberOfRounds = 3;
+const task = 'What is the result of the expression?';
+const operators = '+-*';
 const getOperator = () => {
-  const operatorList = '+-*';
-  const numberOfSymbol = getRandomInRange(0, operatorList.length - 1);
-  return operatorList[numberOfSymbol];
+  const numberOfSymbol = getRandomInRange(0, operators.length - 1);
+  return operators[numberOfSymbol];
 };
 const getResult = (num1, num2, symbol) => {
   switch (symbol) {
@@ -30,7 +29,7 @@ const getQuestionAndRightAnswer = () => {
   return cons(question, rightAnswer);
 };
 const brainCalc = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
+  engine(task, getQuestionAndRightAnswer);
 };
 
 export default brainCalc;

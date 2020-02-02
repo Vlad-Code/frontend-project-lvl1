@@ -4,34 +4,31 @@ import engine from '../game-engine';
 
 import getRandomInRange from '../utils';
 
-const firstQuestion = 'What number is missing in the progression?';
-const numberOfRounds = 3;
-const getProgression = (firstNum, addedNum, miss, numberOfMembers) => {
-  let progression = '';
-  for (let n = 0; n < numberOfMembers; n += 1) {
-    let number = firstNum + n * addedNum;
+const task = 'What number is missing in the progression?';
+const getQuestion = (firstNum, step, miss, length) => {
+  let question = '';
+  for (let n = 0; n < length; n += 1) {
+    let number = firstNum + n * step;
     if (n === miss) {
       number = '..';
     }
-    progression = `${progression} ${number}`;
+    question = `${question}${number} `;
   }
-  return progression;
+  return question;
 };
 const getQuestionAndRightAnswer = () => {
   const firstNumber = getRandomInRange(1, 100);
-  const addedNum = getRandomInRange(1, 10);
-  const numberOfMembers = 10;
-  const numberOfMissedNumber = getRandomInRange(1, numberOfMembers);
-  const myProgression = getProgression(firstNumber, addedNum,
-    numberOfMissedNumber, numberOfMembers);
-  const missedNumber = firstNumber + numberOfMissedNumber * addedNum;
-  const result = (numberOfMissedNumber === 0) ? firstNumber : missedNumber;
-  const rightAnswer = String(result);
-  const question = `${myProgression}`;
-  return cons(question, rightAnswer);
+  const stepOfProgression = getRandomInRange(1, 10);
+  const lengthOfProgression = 10;
+  const numberOfMissedNumber = getRandomInRange(1, lengthOfProgression);
+  const question = String(getQuestion(firstNumber, stepOfProgression,
+    numberOfMissedNumber, lengthOfProgression));
+  const rightAnswer = firstNumber + numberOfMissedNumber * stepOfProgression;
+  const result = String((numberOfMissedNumber === 0) ? firstNumber : rightAnswer);
+  return cons(question, result);
 };
 const brainProgression = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
+  engine(task, getQuestionAndRightAnswer);
 };
 
 export default brainProgression;

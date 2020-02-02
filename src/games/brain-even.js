@@ -4,8 +4,7 @@ import engine from '../game-engine';
 
 import getRandomInRange from '../utils';
 
-const firstQuestion = 'Answer "yes" if the number is even, otherwise answer "no"';
-const numberOfRounds = 3;
+const task = 'Answer "yes" if the number is even, otherwise answer "no"';
 const isEven = (num) => num % 2 === 0;
 const getQuestionAndRightAnswer = () => {
   const number = getRandomInRange(1, 1000);
@@ -14,7 +13,7 @@ const getQuestionAndRightAnswer = () => {
   return cons(question, rightAnswer);
 };
 const brainEven = () => {
-  engine(firstQuestion, getQuestionAndRightAnswer, numberOfRounds);
+  engine(task, getQuestionAndRightAnswer);
 };
 
 export default brainEven;
