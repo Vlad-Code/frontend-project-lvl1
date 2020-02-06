@@ -12,20 +12,19 @@ const getQuestion = (firstNum, step, miss, length) => {
     if (n === miss) {
       number = '..';
     }
-    question = `${question}${number} `;
+    question = `${question} ${number}`;
   }
   return question;
 };
+const lengthOfProgression = 10;
 const getQuestionAndRightAnswer = () => {
   const firstNumber = getRandomInRange(1, 100);
   const stepOfProgression = getRandomInRange(1, 10);
-  const lengthOfProgression = 10;
-  const numberOfMissedNumber = getRandomInRange(1, lengthOfProgression);
-  const question = String(getQuestion(firstNumber, stepOfProgression,
-    numberOfMissedNumber, lengthOfProgression));
-  const rightAnswer = firstNumber + numberOfMissedNumber * stepOfProgression;
-  const result = String((numberOfMissedNumber === 0) ? firstNumber : rightAnswer);
-  return cons(question, result);
+  const missedNumberPosition = getRandomInRange(0, lengthOfProgression - 1);
+  const question = getQuestion(firstNumber, stepOfProgression,
+    missedNumberPosition, lengthOfProgression);
+  const rightAnswer = String(firstNumber + missedNumberPosition * stepOfProgression);
+  return cons(question, rightAnswer);
 };
 const brainProgression = () => {
   engine(task, getQuestionAndRightAnswer);

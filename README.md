@@ -3,8 +3,6 @@ This is my first learning project for Frontend JS profession. It is a simple gam
 
 <a href="https://codeclimate.com/github/Vlad-Code/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d272ac27363f010b180/maintainability" /></a>
 
-<a href="https://codeclimate.com/github/Vlad-Code/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/9d272ac27363f010b180/test_coverage" /></a>
-
 [![Build Status](https://travis-ci.org/Vlad-Code/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Vlad-Code/frontend-project-lvl1)
 
 My asciinema for fifth step <a href="https://asciinema.org/a/284870" target="_blank"><img src="https://asciinema.org/a/284870.svg" /></a>
