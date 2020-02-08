@@ -17,10 +17,11 @@ const engine = (task, getQuestionAndRightAnswer) => {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;( Correct answer is '${rightAnswer}'`);
-      return console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
   }
-  return console.log('Congratulations!');
+  console.log('Congratulations!');
 };
 
 export default engine;

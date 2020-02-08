@@ -8,11 +8,8 @@ const task = 'What number is missing in the progression?';
 const getQuestion = (firstNum, step, miss, length) => {
   let question = '';
   for (let n = 0; n < length; n += 1) {
-    let number = firstNum + n * step;
-    if (n === miss) {
-      number = '..';
-    }
-    question = `${question} ${number}`;
+    const number = firstNum + n * step;
+    question = (n === miss) ? `${question} ..` : `${question} ${number}`;
   }
   return question;
 };
