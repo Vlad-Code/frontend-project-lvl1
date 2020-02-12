@@ -9,7 +9,11 @@ const getQuestion = (firstNum, step, miss, length) => {
   let question = '';
   for (let n = 0; n < length; n += 1) {
     const number = firstNum + n * step;
-    question = (n === miss) ? `${question} ..` : `${question} ${number}`;
+    if (n === 0) {
+      question = (n === miss) ? `${question}..` : `${question}${number}`;
+    } else {
+      question = (n === miss) ? `${question} ..` : `${question} ${number}`;
+    }
   }
   return question;
 };

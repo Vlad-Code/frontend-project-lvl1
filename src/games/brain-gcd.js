@@ -25,7 +25,7 @@ const getGcd = (num1, num2) => {
 const getQuestionAndRightAnswer = () => {
   const number1 = getRandomInRange(1, 100);
   const number2 = getRandomInRange(1, 100);
-  const question = ` ${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const rightAnswer = String(getGcd(number1, number2));
   return cons(question, rightAnswer);
 };

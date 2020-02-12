@@ -18,9 +18,8 @@ const isPrime = (number) => {
 };
 const getQuestionAndRightAnswer = () => {
   const number = getRandomInRange(-1000, 1000);
-  const question = ` ${number}`;
   const rightAnswer = (isPrime(number) === true) ? 'yes' : 'no';
-  return cons(question, rightAnswer);
+  return cons(String(number), rightAnswer);
 };
 const brainPrime = () => {
   engine(task, getQuestionAndRightAnswer);

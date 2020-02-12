@@ -11,7 +11,7 @@ const engine = (task, getQuestionAndRightAnswer) => {
   for (let i = 1; i <= roundsCount; i += 1) {
     const questionAndRightAnswer = getQuestionAndRightAnswer();
     const rightAnswer = cdr(questionAndRightAnswer);
-    console.log(`Question:${car(questionAndRightAnswer)}`);
+    console.log(`Question: ${car(questionAndRightAnswer)}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');

@@ -16,15 +16,17 @@ const getResult = (num1, num2, symbol) => {
       return num1 + num2;
     case '-':
       return num1 - num2;
-    default:
+    case '*':
       return num1 * num2;
+    default:
+      return undefined;
   }
 };
 const getQuestionAndRightAnswer = () => {
   const number1 = getRandomInRange(1, 100);
   const number2 = getRandomInRange(1, 100);
   const operator = getOperator();
-  const question = ` ${number1} ${operator} ${number2}`;
+  const question = `${number1} ${operator} ${number2}`;
   const rightAnswer = String(getResult(number1, number2, operator));
   return cons(question, rightAnswer);
 };
