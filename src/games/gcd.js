@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../utils';
+import getRandomFromRange from '../utils';
 
 const task = 'Find the greatest common divisor of given numbers.';
 const getGcd = (num1, num2) => {
@@ -23,8 +23,8 @@ const getGcd = (num1, num2) => {
   return num1;
 };
 const getQuestionAndRightAnswer = () => {
-  const number1 = getRandomInRange(1, 100);
-  const number2 = getRandomInRange(1, 100);
+  const number1 = getRandomFromRange(1, 100);
+  const number2 = getRandomFromRange(1, 100);
   const question = `${number1} ${number2}`;
   const rightAnswer = String(getGcd(number1, number2));
   return cons(question, rightAnswer);

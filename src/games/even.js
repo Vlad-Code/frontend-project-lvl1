@@ -2,14 +2,14 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../utils';
+import getRandomFromRange from '../utils';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no"';
 const isEven = (num) => num % 2 === 0;
 const getQuestionAndRightAnswer = () => {
-  const number = getRandomInRange(1, 1000);
-  const rightAnswer = (isEven(number) === true) ? 'yes' : 'no';
-  return cons(String(number), rightAnswer);
+  const question = getRandomFromRange(1, 1000);
+  const rightAnswer = (isEven(question) === true) ? 'yes' : 'no';
+  return cons(String(question), rightAnswer);
 };
 const brainEven = () => {
   engine(task, getQuestionAndRightAnswer);

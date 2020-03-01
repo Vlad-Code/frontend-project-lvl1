@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../utils';
+import getRandomFromRange from '../utils';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
@@ -17,9 +17,9 @@ const isPrime = (number) => {
   return true;
 };
 const getQuestionAndRightAnswer = () => {
-  const number = getRandomInRange(-1000, 1000);
-  const rightAnswer = (isPrime(number) === true) ? 'yes' : 'no';
-  return cons(String(number), rightAnswer);
+  const question = getRandomFromRange(-1000, 1000);
+  const rightAnswer = (isPrime(question) === true) ? 'yes' : 'no';
+  return cons(String(question), rightAnswer);
 };
 const brainPrime = () => {
   engine(task, getQuestionAndRightAnswer);

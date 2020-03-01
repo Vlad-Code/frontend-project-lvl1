@@ -1,2 +1,2 @@
-const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-export default getRandomInRange;
+const getRandomFromRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export default getRandomFromRange;

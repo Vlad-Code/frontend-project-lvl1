@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 
 import engine from '../game-engine';
 
-import getRandomInRange from '../utils';
+import getRandomFromRange from '../utils';
 
 const task = 'What number is missing in the progression?';
 const getQuestion = (firstNum, step, miss, length) => {
@@ -19,9 +19,9 @@ const getQuestion = (firstNum, step, miss, length) => {
 };
 const lengthOfProgression = 10;
 const getQuestionAndRightAnswer = () => {
-  const firstNumber = getRandomInRange(1, 100);
-  const stepOfProgression = getRandomInRange(1, 10);
-  const missedNumberPosition = getRandomInRange(0, lengthOfProgression - 1);
+  const firstNumber = getRandomFromRange(1, 100);
+  const stepOfProgression = getRandomFromRange(1, 10);
+  const missedNumberPosition = getRandomFromRange(0, lengthOfProgression - 1);
   const question = getQuestion(firstNumber, stepOfProgression,
     missedNumberPosition, lengthOfProgression);
   const rightAnswer = String(firstNumber + missedNumberPosition * stepOfProgression);
