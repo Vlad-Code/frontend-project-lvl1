@@ -1,5 +1,6 @@
 [![Node CI](https://github.com/Vlad-Code/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/Vlad-Code/frontend-project-lvl1/actions/workflows/eslint.yml)
 <a href="https://codeclimate.com/github/Vlad-Code/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d272ac27363f010b180/maintainability" /></a>
+[![hexlet-check](https://github.com/Vlad-Code/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Vlad-Code/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 
 <a href="https://asciinema.org/a/496360" target="_blank"><img src="https://asciinema.org/a/496360.svg" /></a>
 
