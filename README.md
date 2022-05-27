@@ -1,15 +1,22 @@
-# frontend-project-lvl1
-This is my first learning project for Frontend JS profession. It is a simple game for console, which name is "brain games". The most important purpose of this progect is to learn JS infrastucture, like npm, babel, eslint etc.
+[![Node CI](https://github.com/Vlad-Code/brain-games-2022/actions/workflows/eslint.yml/badge.svg)](https://github.com/Vlad-Code/brain-games-2022/actions/workflows/eslint.yml)
+<a href="https://codeclimate.com/github/Vlad-Code/brain-games-2022/maintainability"><img src="https://api.codeclimate.com/v1/badges/2f18c9626217ca9a53bf/maintainability" /></a>
 
-<a href="https://codeclimate.com/github/Vlad-Code/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d272ac27363f010b180/maintainability" /></a>
+<a href="https://asciinema.org/a/496360" target="_blank"><img src="https://asciinema.org/a/496360.svg" /></a>
 
-[![Build Status](https://travis-ci.org/Vlad-Code/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Vlad-Code/frontend-project-lvl1)
+Brain-even game
 
-My asciinema for fifth step <a href="https://asciinema.org/a/284870" target="_blank"><img src="https://asciinema.org/a/284870.svg" /></a>
+<a href="https://asciinema.org/a/496380" target="_blank"><img src="https://asciinema.org/a/496380.svg" /></a>
 
-My asciinema for sixth step <a href="https://asciinema.org/a/285638" target="_blank"><img src="https://asciinema.org/a/285638.svg" /></a>
+Brain-calc game
 
-My asciinema for seventh step <a href="https://asciinema.org/a/286172" target="_blank"><img src="https://asciinema.org/a/286172.svg" /></a>
-My asciinema for eighth step <a href="https://asciinema.org/a/287509" target="_blank"><img src="https://asciinema.org/a/287509.svg" /></a>
+<a href="https://asciinema.org/a/497053" target="_blank"><img src="https://asciinema.org/a/497053.svg" /></a>
 
-My asciinema for ninth step <a href="https://asciinema.org/a/288802" target="_blank"><img src="https://asciinema.org/a/288802.svg" /></a>
+Brain-gcd game
+
+<a href="https://asciinema.org/a/497356" target="_blank"><img src="https://asciinema.org/a/497356.svg" /></a>
+
+Brain-progression game
+
+<a href="https://asciinema.org/a/497364" target="_blank"><img src="https://asciinema.org/a/497364.svg" /></a>
+
+Brain-prime game

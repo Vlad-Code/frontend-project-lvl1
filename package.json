@@ -1,53 +1,34 @@
 {
-  "name": "brain-games",
+  "name": "@hexlet/code",
+  "type": "module",
   "version": "1.0.0",
-  "description": "my first JS-frontend learning progect",
-  "keywords": [
-    "game",
-    "brain",
-    "Vladislav Kungurov",
-    "learning project"
-  ],
-  "main": "",
+  "description": "My first frontend project in 2022",
+  "main": "brain-games.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
+    "brain-games-2022": "bin/brain-games.js",
+    "brain-even-2022": "bin/brain-even.js",
+    "brain-calc-2022": "bin/brain-calc.js",
+    "brain-gcd-2022": "bin/brain-gcd.js",
+    "brain-progression-2022": "bin/brain-progression.js",
+    "brain-prime-2022": "bin/brain-prime.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vlad-Code/frontend-project-lvl1.git"
+    "url": "git+https://github.com/Vlad-Code/brain-games-2022.git"
   },
   "author": "Vladislav Kungurov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vlad-Code/frontend-project-lvl1/issues"
+    "url": "https://github.com/Vlad-Code/brain-games-2022/issues"
   },
-  "homepage": "https://github.com/Vlad-Code/frontend-project-lvl1#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2"
-  },
+  "homepage": "https://github.com/Vlad-Code/brain-games-2022#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.0.10",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "readline-sync": "^1.4.10"
   }
 }
