@@ -1,11 +1,11 @@
 import engine from '../index.js';
+import getRandomNumber from './helpers.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getMainQuestion = () => 'What number is missing in the progression?';
 const getProgression = () => {
-  const mainQuestion = 'What number is missing in the progression?';
-  const unknownNumberIndex = getRandomInt(0, 9);
-  const firstNumber = getRandomInt(1, 99);
-  const difference = getRandomInt(1, 10);
+  const unknownNumberIndex = getRandomNumber(0, 9);
+  const firstNumber = getRandomNumber(1, 99);
+  const difference = getRandomNumber(1, 10);
   let number = firstNumber;
   let question = '';
   let rightAnswer;
@@ -19,7 +19,7 @@ const getProgression = () => {
     number += difference;
   }
   const normalisedQuestion = `Question: ${question.trim()}`;
-  return [mainQuestion, normalisedQuestion, rightAnswer];
+  return [normalisedQuestion, rightAnswer];
 };
 
-export default () => engine(getProgression);
+export default () => engine(getMainQuestion, getProgression);

@@ -1,18 +1,20 @@
 import engine from '../index.js';
+import getRandomNumber from './helpers.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const isPrime = () => {
-  const number = getRandomInt(2, 1000);
-  const mainQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const question = `Question: ${number}`;
-  let rightAnswer = 'yes';
+const getMainQuestion = () => 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const isPrime = (number) => {
   for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
-      rightAnswer = 'no';
-      break;
+      return false;
     }
   }
-  return [mainQuestion, question, rightAnswer];
+  return true;
+};
+const getBrainPrime = () => {
+  const number = getRandomNumber(2, 1000);
+  const question = `Question: ${number}`;
+  const rightAnswer = isPrime(number) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
-export default () => engine(isPrime);
+export default () => engine(getMainQuestion, getBrainPrime);

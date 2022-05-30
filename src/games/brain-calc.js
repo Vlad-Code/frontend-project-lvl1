@@ -1,32 +1,30 @@
 import engine from '../index.js';
+import getRandomNumber from './helpers.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const operators = ['+', '-', '*'];
 const getRightAnswer = (num1, num2, oper) => {
-  let rightAnswer;
   switch (oper) {
     case '+':
-      rightAnswer = num1 + num2;
-      break;
+      return num1 + num2;
 
     case '-':
-      rightAnswer = num1 - num2;
-      break;
+      return num1 - num2;
+
+    case '*':
+      return num1 * num2;
 
     default:
-      rightAnswer = num1 * num2;
-      break;
+      throw new Error(`Unknown operator: ${oper}!`);
   }
-  return rightAnswer;
 };
+const getMainQuestion = () => 'What is the result of the expression?';
 const getCalculator = () => {
-  const numberOne = getRandomInt(1, 100);
-  const numberTwo = getRandomInt(1, 100);
-  const operator = operators[getRandomInt(0, 2)];
-  const mainQuestion = 'What is the result of the expression?';
+  const numberOne = getRandomNumber(1, 100);
+  const numberTwo = getRandomNumber(1, 100);
+  const operator = operators[getRandomNumber(0, 2)];
   const question = `Question: ${numberOne} ${operator} ${numberTwo}`;
   const rightAnswer = getRightAnswer(numberOne, numberTwo, operator);
-  return [mainQuestion, question, rightAnswer];
+  return [question, rightAnswer];
 };
 
-export default () => engine(getCalculator);
+export default () => engine(getMainQuestion, getCalculator);
