@@ -6,17 +6,11 @@ const getEuclidsGCD = (num1, num2) => {
     return num1;
   }
   if (num1 > num2) {
-    const remains = num1 % num2;
-    if (remains === 0) {
-      return num2;
-    }
-    return getEuclidsGCD(num2, remains);
+    const newNum1 = num1 - num2;
+    return getEuclidsGCD(newNum1, num2);
   }
-  if (num2 % num1 === 0) {
-    return num1;
-  }
-  const remains = num2 % num1;
-  return getEuclidsGCD(num1, remains);
+  const newNum2 = num2 - num1;
+  return getEuclidsGCD(num1, newNum2);
 };
 const getMainQuestion = () => 'Find the greatest common divisor of given numbers.';
 const getBrainGCD = () => {

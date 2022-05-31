@@ -3,23 +3,23 @@ import getRandomNumber from './helpers.js';
 
 const getMainQuestion = () => 'What number is missing in the progression?';
 const getProgression = () => {
-  const unknownNumberIndex = getRandomNumber(0, 9);
   const firstNumber = getRandomNumber(1, 99);
   const difference = getRandomNumber(1, 10);
+  const progression = [];
   let number = firstNumber;
-  let question = '';
-  let rightAnswer;
   for (let i = 0; i < 10; i += 1) {
-    if (i === unknownNumberIndex) {
-      rightAnswer = number;
-      question = `${question}.. `;
-    } else {
-      question = `${question}${number} `;
-    }
+    progression.push(number);
     number += difference;
   }
-  const normalisedQuestion = `Question: ${question.trim()}`;
-  return [normalisedQuestion, rightAnswer];
+  return progression;
+};
+const getQuestionAndRightAnswer = () => {
+  const progression = getProgression();
+  const unknownNumberIndex = getRandomNumber(0, 9);
+  const rightAnswer = progression[unknownNumberIndex];
+  progression[unknownNumberIndex] = '..';
+  const question = progression.join(' ');
+  return [question, rightAnswer];
 };
 
-export default () => engine(getMainQuestion, getProgression);
+export default () => engine(getMainQuestion, getQuestionAndRightAnswer);
