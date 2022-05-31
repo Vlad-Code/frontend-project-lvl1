@@ -18,7 +18,7 @@ const getQuestionAndRightAnswer = () => {
   const unknownNumberIndex = getRandomNumber(0, 9);
   const rightAnswer = progression[unknownNumberIndex];
   progression[unknownNumberIndex] = '..';
-  const question = progression.join(' ');
+  const question = `Question: ${progression.join(' ')}`;
   return [question, rightAnswer];
 };
 
